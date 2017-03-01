@@ -4,7 +4,6 @@ var weatherTokenApi = "token";
 var express = require("express");
 var app = express();
 var server = require("http").createServer(app);
-// var io = require("socket.io")(server);
 var cache = require("memory-cache");
 
 var WeatherApi = require("./weather-api");
@@ -49,17 +48,6 @@ app.get( "/get-weather" , function( req, res ) {
   var weatherData = cache.get(weatherCacheKey) || {};
   res.json(weatherData);
 });
-
-//----------------------------------
-// SOCKETS
-//----------------------------------
-
-// io.on("connection", function (socket) {
-//
-//     socket.on("join", function (data) {
-//
-//     });
-// });
 
 //----------------------------------
 // START SERVER

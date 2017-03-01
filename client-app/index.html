@@ -5,15 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
   <link rel="stylesheet" href="assets/weather-icons/css/weather-icons.min.css"/>
   <link rel="stylesheet" href="styles.css"/>
-  <!-- url handled by socket.io in the server-->
-  <script type="text/javascript" src="/socket.io/socket.io.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-  <!--<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/locale/af.js"></script>-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.17.1/moment.min.js"></script>
 </head>
 
 <body>
   <div id="container">
-    <div id="time">10:30</div>
+    <div id="date-time">
+      <div class="time"></div>
+      <div class="date"></div>
+    </div>
 
     <div id="weather">
       <div class="weather-currently">

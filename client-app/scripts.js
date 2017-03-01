@@ -1,5 +1,27 @@
 
 //----------------------------------
+// DATE
+//----------------------------------
+
+var timeEl = $("#date-time .time");
+var dateEl = $("#date-time .date");
+
+var dateTimeRenderInterval = 10000; // 10s
+
+var renderDateTime = function () {
+  var timeText = moment().format("HH:mm");
+  var dateText = moment().format("dddd, Do MMMM");
+
+  timeEl.text(timeText);
+  dateEl.text(dateText);
+
+  setTimeout(renderDateTime, dateTimeRenderInterval);
+};
+
+renderDateTime();
+
+
+//----------------------------------
 // WEATHER
 //----------------------------------
 
@@ -53,21 +75,3 @@ var getWeather = function () {
 };
 
 getWeather();
-
-//----------------------------------
-// SOCKETS
-//----------------------------------
-
-var socket;
-
-var initConnection = function() {
-  socket = io.connect('/');
-  setSockets();
-  socket.emit('ready');
-};
-
-var setSockets = function () {
-  socket.on('lol', lol.bind(this));
-};
-
-// initConnection();

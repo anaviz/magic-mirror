@@ -11,14 +11,22 @@ html , body {
 
 #container {
     position: relative;
-    margin: 50px;
+    margin: 5px;
 }
 
-#time {
+#date-time {
     position: absolute;
     top: 0;
     right: 0;
-    font-size: 65px;
+}
+
+#date-time .time {
+    font-size: 60px;
+    margin-bottom: 10px;
+}
+
+#date-time .date {
+    font-size: 20px;
 }
 
 #weather {
@@ -32,11 +40,11 @@ html , body {
 }
 
 #weather .weather-icon {
-    font-size: 85px;
+    font-size: 90px;
 }
 
 #weather .weather-temperature {
-    font-size: 55px;
+    font-size: 60px;
     margin-left: 20px;
 }
 
@@ -47,4 +55,5 @@ html , body {
 
 #weather .weather-summary {
     font-size: 20px;
+    max-width: 50%;
 }
